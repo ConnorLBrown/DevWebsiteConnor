@@ -76,7 +76,7 @@ const TAB_DATA = [
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("languages");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -101,29 +101,29 @@ const AboutSection = () => {
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
+              selectTab={() => handleTabChange("languages")}
+              active={tab === "languages"}
             >
               {" "}
-              Skills{" "}
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              {" "}
-              Software Skills{" "}
+              Coding Languages{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("software")}
               active={tab === "software"}
             >
               {" "}
-              Database Skills{" "}
+              Software Skills{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("database")}
               active={tab === "database"}
+            >
+              {" "}
+              Database Skills{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("education")}
+              active={tab === "education"}
             >
               {" "}
               Education{" "}
