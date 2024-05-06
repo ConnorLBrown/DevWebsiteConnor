@@ -5,16 +5,50 @@ import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
-    title: "Skills",
-    id: "skills",
+    title: "Coding Languages",
+    id: "languages",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className="list-disc pl-5">
+        <li>C#</li>
+        <li>Java</li>
+        <li>JavaScroipt</li>
+        <li>TypeScript</li>
+        <li>SQL</li>
+        <li>PHP</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Software Technolgies",
+    id: "software",
+    content: (
+      <ul className="list-disc pl-5">
+        <li>AWS Lambda</li>
+        <li>AWS S3</li>
+        <li>AWS Amplify</li>
+        <li>AJAX</li>
+        <li>ASP.NET</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>TailwindCSS</li>
         <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
+        <li>Next.js</li>
+        <li>React.js</li>
+        <li>Express.js</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Database Technologies",
+    id: "database",
+    content: (
+      <ul className="list-disc pl-5">
+        <li>MySQL</li>
+        <li>MongoDB</li>
+        <li>DynamoDB</li>
+        <li>MariaDB</li>
+        <li>Acess</li>
+        <li>Excel</li>
       </ul>
     ),
   },
@@ -23,8 +57,9 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <ui>University of North Alabama, (Florence, AL)</ui>
+        <li>Master's, Concentration: Information Systems</li>
+        <li>Bachelor's, Major: Computer Information Systems</li>
       </ul>
     ),
   },
@@ -73,8 +108,22 @@ const AboutSection = () => {
               Skills{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
+              selectTab={() => handleTabChange("skills")}
+              active={tab === "skills"}
+            >
+              {" "}
+              Software Skills{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("software")}
+              active={tab === "software"}
+            >
+              {" "}
+              Database Skills{" "}
+            </TabButton>
+            <TabButton
+              selectTab={() => handleTabChange("database")}
+              active={tab === "database"}
             >
               {" "}
               Education{" "}
