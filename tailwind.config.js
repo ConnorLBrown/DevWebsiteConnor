@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,10 +9,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-  "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-  "gradient-custom": "linear-gradient(to bottom, #93c5fd, #f5d0fe)"
+      backgroundColor: {
+        'black': '#000000',
+      },
+      fontFamily: {
+        sans: ["Lato", "sans-serif"],
       },
     },
     colors: {

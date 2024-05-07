@@ -42,7 +42,7 @@ const skillsData= [
     title: "Database Technologies",
     id: "database",
     skills: (
-      <ul className="text-white border-primary-500">
+      <ul className="list-disc pl-5">
         <li>MySQL</li>
         <li>MongoDB</li>
         <li>DynamoDB</li>
@@ -56,7 +56,7 @@ const skillsData= [
     title: "Education",
     id: "education",
     skills: (
-      <ul className="text-white border-primary-500">
+      <ul className="list-disc pl-5">
         <li>University of North Alabama, Florence, AL</li>
         <li>Master's, Concentration: Information Systems</li>
         <li>Bachelor's, Major: Computer Information Systems</li>
@@ -67,7 +67,7 @@ const skillsData= [
     title: "Certifications",
     id: "certifications",
     skills: (
-      <ul className="text-white border-primary-500">
+      <ul className="list-disc pl-5">
         <li>AWS Cloud Practitioner</li>
         <li>Google Professional Cloud Developer</li>
       </ul>
@@ -96,36 +96,47 @@ const SkillsSection = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-12 mb-8 md:mb-6">
-        Skills
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        {skillsData.map((skill) => (
-          <SkillsTag
-            key={skill.id}
-            onClick={handleTagChange}
-            name={skill.title}
-            isSelected={tag === skill.title}
-          />
-        ))}
-      </div>
-
-      {/* Display selected skills */}
-      <div>
-        {selectedTag && (
-          <div className="text-white border-primary-500">
-            {/* Sort the list items alphabetically */}
-            {selectedTag.skills.type === "ul" ? (
-              <ul className={selectedTag.skills.props.className}>
-                {sortListItems(selectedTag.skills)}
-              </ul>
-            ) : (
-              selectedTag.skills
-            )}
+    <h2 className="text-center text-4xl font-bold text-white mt-12 mb-8 md:mb-6">
+      Skills
+    </h2>
+    <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      {skillsData.map((skill) => (
+        <SkillsTag
+          key={skill.id}
+          onClick={handleTagChange}
+          name={skill.title}
+          isSelected={tag === skill.title}
+        />
+      ))}
+    </div>
+  
+    {/* Grid of buttons */}
+    {selectedTag && (
+      <div className="w-full bg-gray-700 rounded-lg shadow-lg p-4 mt-4 outline-white">
+        {selectedTag.skills.type === "buttons" && (
+          <div className="grid grid-cols-4 gap-4">
+            {selectedTag.skills.data.map((skill, index) => (
+              <button
+                key={index}
+                className="bg-gradient-to-r from-blue-500 to-pink-500 text-white font-sans text-xl py-2 px-4 rounded-lg border-2 border-white outline-none focus:outline-none"
+                onClick={() => handleButtonClick(skill)}
+              >
+                {skill}
+              </button>
+            ))}
           </div>
         )}
+  
+        {selectedTag.skills.type === "ul" && (
+          <ul className={`${selectedTag.skills.props.className} mt-4`}>
+            {sortListItems(selectedTag.skills)}
+          </ul>
+        )}
+  
+        {/* Add other cases as needed */}
       </div>
-    </section>
+    )}
+  </section>
   );
 };
 
