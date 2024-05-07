@@ -16,6 +16,7 @@
   }
 }
 
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,6 +25,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    
 }
 
 ul {
@@ -35,3 +37,15 @@ li {
   margin: 25;
   padding: top 200px, bottom 200px;
 }
+
+.project-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+  }

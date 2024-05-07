@@ -1,7 +1,6 @@
 "use client";
 import React, { useTransition, useState } from "react";
-import TabButton from "./TabButton";
-import AboutPic from "./AboutPic";
+import AboutPic from "./BioPic";
 
 const TAB_DATA = [
   {

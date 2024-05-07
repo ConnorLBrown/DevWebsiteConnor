@@ -9,8 +9,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'grid-pattern': "url('/public/grid.png')",
+      },
+      backgroundOpacity: {
+        '50': '0.5',
+      },
       backgroundColor: {
         'black': '#000000',
+        'opcacity-80': 'rgba(0, 0, 0, 0.8)',
       },
       fontFamily: {
         sans: ["Lato", "sans-serif"],

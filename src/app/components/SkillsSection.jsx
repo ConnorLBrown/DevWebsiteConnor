@@ -96,8 +96,8 @@ const SkillsSection = () => {
 
   return (
     <section id="projects">
-    <h2 className="text-center text-4xl font-bold text-white mt-12 mb-8 md:mb-6">
-      Skills
+    <h2 className="text-center text-6xl font-bold font-sans text-white mt-12 mb-8 md:mb-6">
+      My Skills
     </h2>
     <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
       {skillsData.map((skill) => (

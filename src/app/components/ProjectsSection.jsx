@@ -34,8 +34,8 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "UNA Advising System Analysis & Design Proposal",
-    description: "This is the projected proposal that my team made for the advising system at North Alabama. This proposal covers the requirements, maintenance, design, system sequences, flowcharts, finances, UI and UX of the proposed system",
+    title: "System Analysis & Design Proposal",
+    description: "Analysis & Design for new advising system at North Alabama",
     image: "/images/projects/4.png",
     tag: ["All", "Reviews"],
     gitUrl: "https://www.linkedin.com/in/connor-brown-32591a269/details/projects/",
@@ -81,7 +81,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <h2 className="text-center text-6xl font-bold text-white mt-7 mb-4 md:mb-12">
         My Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">

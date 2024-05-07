@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import MyLogo from "../../../public/mylogo.png";
+import MyLogo from "../../../public/Connor.svg";
 
-const AboutPic = () => {
+const BioPic = () => {
     return (
       <div className="relative" style={{ width: '50%', paddingTop: '50%', }}>
         <div className="absolute inset-0 rounded-full bg-white overflow-hidden" style={{ border: '3.5px solid white', borderRadius: '50%',}}>
@@ -14,6 +14,6 @@ const AboutPic = () => {
     );
   };
   
-  export default AboutPic;
+  export default BioPic;
   
   
