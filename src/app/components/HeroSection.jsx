@@ -23,6 +23,7 @@ const HeroSection = () => {
             <TypeAnimation
               sequence={[
                 "Connor Brown",1000,
+
               ]}
               wrapper="span"
               speed={65}
@@ -64,7 +65,8 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
-          <div className="rounded-full bg-[#000000] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full border 4 border-blue-500 bg-transparent w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] relative">
+          <div className="rounded-full bg-transparent w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
               src="/images/profile.png"
               alt="Profile Picture"
@@ -72,6 +74,7 @@ const HeroSection = () => {
               width={500}
               height={500}
             />
+          </div>
           </div>
         </motion.div>
       </div>

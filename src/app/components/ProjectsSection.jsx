@@ -7,56 +7,56 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "UNA Mobile Dining App Proposal",
+    description: "Provided redesign for enhanced usability mobile dining app using HTML, CSS, JavaScript, and React.js",
     image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "javaScript"],
+    gitUrl: "https://github.com/ConnorLBrown/June-Juliette",
+    previewUrl: "https://github.com/ConnorLBrown/June-Juliette",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "UNA Faculty Full Stack Devlopment Project",
+    description: "Agile Full Stack Development Project for UNA Faculty game using MongoDB, HTML, CSS, JavaScript, and Express.js",
+    image: "https://github.com/errorless-stone/name-game-thing",
+    tag: ["All", "JavaScript"],
+    gitUrl: "https://github.com/errorless-stone/name-game-thing",
+    previewUrl: "https://alabamanewscenter.com/wp-content/uploads/2017/08/UNA-LOGO.jpg",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Java Customer Project",
+    description: "This project is practicing the implementation of a program that using Java methods and classes for a customer.",
     image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Java"],
+    gitUrl: "https://github.com/ConnorLBrown/Java-Customer-Project",
+    previewUrl: "https://github.com/ConnorLBrown/Java-Customer-Project",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
+    title: "",
+    description: "This is the projected proposal that my team made for the advising system at North Alabama. This proposal covers the requirements, maintenance, design, system sequences, flowcharts, finances, UI and UX of the proposed system",
     image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Reviews"],
+    gitUrl: "https://www.linkedin.com/in/connor-brown-32591a269/details/projects/",
+    previewUrl: "https://www.linkedin.com/in/connor-brown-32591a269/details/projects/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    title: "Basketball Team CRUD Application",
+    description: "CRUD application for Basketball team using PHP, MySQL, and HTML",
     image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "PHP"],
+    gitUrl: "https://github.com/ConnorLBrown/Basketball-CRUD",
+    previewUrl: "https://github.com/ConnorLBrown/Basketball-CRUD",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
+    title: "AWS Lambda Project",
+    description: "Presentation for Software Architecture course / Python Function I used during the demo",
     image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    tag: ["All", "Python"],
+    gitUrl: "https://github.com/ConnorLBrown/AWSLambda-Presentation",
     previewUrl: "/",
   },
 ];
@@ -92,13 +92,28 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="JavaScript"
+          isSelected={tag === "JavaScript"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Java"
+          isSelected={tag === "Java"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Python"
+          isSelected={tag === "Python"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="PHP"
+          isSelected={tag === "PHP"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Reviews"
+          isSelected={tag === "Reviews"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

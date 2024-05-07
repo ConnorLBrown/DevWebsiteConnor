@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+ul {
+  list-style-type: none;
+  padding: ;
+}
+
+li {
+  margin: 25;
+  padding: top 200px, bottom 200px;
+}
