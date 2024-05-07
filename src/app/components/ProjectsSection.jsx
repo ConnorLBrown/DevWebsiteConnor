@@ -34,7 +34,7 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "",
+    title: "UNA Advising System Analysis & Design Proposal",
     description: "This is the projected proposal that my team made for the advising system at North Alabama. This proposal covers the requirements, maintenance, design, system sequences, flowcharts, finances, UI and UX of the proposed system",
     image: "/images/projects/4.png",
     tag: ["All", "Reviews"],
