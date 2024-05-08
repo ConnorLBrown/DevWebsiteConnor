@@ -19,7 +19,7 @@ const skillsData= [
     ),
   },
   {
-    title: "Software Technologies",
+    title: "Software / Web",
     id: "software",
     skills: (
       <ul className="list-disc pl-5">
@@ -39,7 +39,7 @@ const skillsData= [
     ),
   },
   {
-    title: "Database Technologies",
+    title: "Database",
     id: "database",
     skills: (
       <ul className="list-disc pl-5">
@@ -49,27 +49,6 @@ const skillsData= [
         <li>MariaDB</li>
         <li>Access</li>
         <li>Excel</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "education",
-    skills: (
-      <ul className="list-disc pl-5">
-        <li>University of North Alabama, Florence, AL</li>
-        <li>Master's, Concentration: Information Systems</li>
-        <li>Bachelor's, Major: Computer Information Systems</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Certifications",
-    id: "certifications",
-    skills: (
-      <ul className="list-disc pl-5">
-        <li></li>
-        <li>Google Professional Cloud Developer</li>
       </ul>
     ),
   },
@@ -96,9 +75,6 @@ const SkillsSection = () => {
 
   return (
     <section id="projects" className="rounded-lg">
-    <p className="capitalize text-center text-4xl font-bold font-sans text-white mt-12 mb-8 md:mb-6" style={{ textShadow: '3px 3px 3px black', borderBottom: '3pt solid #6366f1' }}>
-  Some Things I've Learned Along The Way
-</p>
     <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         {skillsData.map((skill) => (
           <SkillsTag
@@ -112,9 +88,9 @@ const SkillsSection = () => {
       
       {/* Grid of buttons */}
       {selectedTag && (
-        <div className="w-full bg-gray-200 rounded-lg p-4 mt-3 border border-purple-300">
+        <div className="w-100% bg-white rounded-lg p-4 mt-3  ">
           {selectedTag.skills.type === "buttons" && (
-            <div className="flex bg-white flex-wrap gap-4">
+            <div className="w-65% bg-white rounded-lg p-4 mt-3 border-solid border-2 border-indigo-600 ">
               {selectedTag.skills.data.map((skill, index) => (
                 <button
                 key={index}
@@ -131,8 +107,8 @@ const SkillsSection = () => {
                 <button
                 key={index}
                 style={{
-                  backgroundColor: "#4a90e2",
-                  color: "white",
+                  backgroundColor: "rgba(0, 0, 0, 0.1)",
+                  color: "black",
                   fontSize: "1.5rem",
                   padding: "0.5rem 1rem",
                   border: "none",
@@ -141,9 +117,11 @@ const SkillsSection = () => {
                   marginBottom: "0.5rem",
                   marginBottom: "0.5rem",
                     marginRight: "0.5rem",
+                    font:"sans-serif",
                 }}
               >
                   {item.props.children}
+                  
                 </button>
               ))}
             </div>
