@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import MyLogo from "../../../public/Connor.svg";
+import MyLogo from "../../../public/CB.png";
 
 const BioPic = () => {
     return (

@@ -5,6 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+
+
 const HeroSection = () => {
   return (
     <section className="bg-black lg:py-16">

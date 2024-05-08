@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useState, useRef } from "react";
 import SkillsTag from "./SkillsTag";
 import { useInView } from "framer-motion";
@@ -89,54 +89,68 @@ const SkillsSection = () => {
 
   // Function to sort list items alphabetically
   const sortListItems = (list) => {
-    return React.Children.toArray(list.props.children).sort((a, b) => {
+    return React.Children.toArray(list).sort((a, b) => {
       return a.props.children.localeCompare(b.props.children);
     });
   };
 
   return (
-    <section id="projects">
-    <h2 className="text-center text-6xl font-bold font-sans text-white mt-12 mb-8 md:mb-6">
-      My Skills
-    </h2>
+    <section id="projects" className="rounded-lg bg-slate-400 border-indigo-600 justify-center" style={{ borderWidth: '4px' }}>
+    <p className="capitalize text-center text-6xl font-bold font-sans text-white mt-12 mb-8 md:mb-6" style={{ textShadow: '3px 3px 3px black', borderBottom: '3pt solid #6366f1' }}>
+  My Skills
+</p>
     <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-      {skillsData.map((skill) => (
-        <SkillsTag
-          key={skill.id}
-          onClick={handleTagChange}
-          name={skill.title}
-          isSelected={tag === skill.title}
-        />
-      ))}
-    </div>
-  
-    {/* Grid of buttons */}
-    {selectedTag && (
-      <div className="w-full bg-gray-700 rounded-lg shadow-lg p-4 mt-4 outline-white">
-        {selectedTag.skills.type === "buttons" && (
-          <div className="grid grid-cols-4 gap-4">
-            {selectedTag.skills.data.map((skill, index) => (
-              <button
+        {skillsData.map((skill) => (
+          <SkillsTag
+            key={skill.id}
+            onClick={handleTagChange}
+            name={skill.title}
+            isSelected={tag === skill.title}
+          />
+        ))}
+      </div>
+      
+      {/* Grid of buttons */}
+      {selectedTag && (
+        <div className="w-full bg-gray-200 rounded-lg p-4 mt-3 border border-gray-300">
+          {selectedTag.skills.type === "buttons" && (
+            <div className="flex bg-white flex-wrap gap-4">
+              {selectedTag.skills.data.map((skill, index) => (
+                <button
                 key={index}
-                className="bg-gradient-to-r from-blue-500 to-pink-500 text-white font-sans text-xl py-2 px-4 rounded-lg border-2 border-white outline-none focus:outline-none"
-                onClick={() => handleButtonClick(skill)}
-              >
+                onClick={() => handleButtonClick(skill)}>
                 {skill}
               </button>
-            ))}
-          </div>
-        )}
-  
-        {selectedTag.skills.type === "ul" && (
-          <ul className={`${selectedTag.skills.props.className} mt-4`}>
-            {sortListItems(selectedTag.skills)}
-          </ul>
-        )}
-  
-        {/* Add other cases as needed */}
-      </div>
-    )}
-  </section>
+              ))}
+            </div>
+          )}
+
+          {selectedTag.skills.type === "ul" && (
+            <div>
+              {sortListItems(selectedTag.skills.props.children).map((item, index) => (
+                <button
+                key={index}
+                style={{
+                  backgroundColor: "#4a90e2",
+                  color: "white",
+                  fontSize: "1.5rem",
+                  padding: "0.5rem 1rem",
+                  border: "none",
+                  borderRadius: "0.5rem",
+                  cursor: "pointer",
+                  marginBottom: "0.5rem",
+                  marginBottom: "0.5rem",
+                    marginRight: "0.5rem",
+                }}
+              >
+                  {item.props.children}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </section>
   );
 };
 
