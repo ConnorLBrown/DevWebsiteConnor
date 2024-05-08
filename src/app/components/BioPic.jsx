@@ -14,4 +14,4 @@ const BioPic = () => {
     );
 };
 
-export default BioPic; 
+export default BioPic;
