@@ -68,7 +68,7 @@ const skillsData= [
     id: "certifications",
     skills: (
       <ul className="list-disc pl-5">
-        <li>AWS Cloud Practitioner</li>
+        <li></li>
         <li>Google Professional Cloud Developer</li>
       </ul>
     ),
@@ -95,9 +95,9 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="projects" className="rounded-lg bg-slate-400 border-indigo-600 justify-center" style={{ borderWidth: '4px' }}>
-    <p className="capitalize text-center text-6xl font-bold font-sans text-white mt-12 mb-8 md:mb-6" style={{ textShadow: '3px 3px 3px black', borderBottom: '3pt solid #6366f1' }}>
-  My Skills
+    <section id="projects" className="rounded-lg">
+    <p className="capitalize text-center text-4xl font-bold font-sans text-white mt-12 mb-8 md:mb-6" style={{ textShadow: '3px 3px 3px black', borderBottom: '3pt solid #6366f1' }}>
+  Some Things I've Learned Along The Way
 </p>
     <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         {skillsData.map((skill) => (
@@ -112,7 +112,7 @@ const SkillsSection = () => {
       
       {/* Grid of buttons */}
       {selectedTag && (
-        <div className="w-full bg-gray-200 rounded-lg p-4 mt-3 border border-gray-300">
+        <div className="w-full bg-gray-200 rounded-lg p-4 mt-3 border border-purple-300">
           {selectedTag.skills.type === "buttons" && (
             <div className="flex bg-white flex-wrap gap-4">
               {selectedTag.skills.data.map((skill, index) => (

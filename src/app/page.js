@@ -24,13 +24,13 @@ export default function Home() {
         backgroundPosition: 'center',
       }}>
         <HeroSection />
-        <div className="my-16"></div> {/* Space between sections */}
+        <div className="my-80"></div> {/* Space between sections */}
         <Bio />
-        <div className="my-16"></div> {/* Space between sections */}
+        <div className="my-80"></div> {/* Space between sections */}
         <SkillsSection />
-        <div className="my-16"></div> {/* Space between sections */}
+        <div className="my-80"></div> {/* Space between sections */}
         <ProjectsSection />
-        <div className="my-16"></div> {/* Space between sections */}
+        <div className="my-80"></div> {/* Space between sections */}
         <EmailSection />
       </div>
       <Footer />

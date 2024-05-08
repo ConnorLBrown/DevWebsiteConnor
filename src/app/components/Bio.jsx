@@ -1,6 +1,6 @@
 "use client";
 import React, { useTransition, useState } from "react";
-import AboutPic from "./BioPic";
+import BioPic from "./BioPic";
 
 const TAB_DATA = [
   {
@@ -87,8 +87,8 @@ const Bio = () => {
   return (
     <section className="text-white" id="about">
   <div className="md:flex md:items-start py-8 px-4 xl:px-16">
+  <BioPic />
     <div className="md:flex md:flex-row md:items-start md:justify-center md:flex-1">
-      <AboutPic />
     </div>
     <div className="md:flex md:flex-row md:items-start md:justify-center md:flex-1 md:ml-8 text-center md:text-left mt-4 md:mt-0">
       <div className="flex flex-col">
