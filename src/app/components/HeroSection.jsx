@@ -68,7 +68,7 @@ const HeroSection = () => {
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
           <div className="relative w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden">
-            <div className="border-4 border-transparent absolute inset-0 rounded-full" style={{ backgroundImage: 'linear-gradient(to right, #4F46E5, #8E2DE2)' }}></div>
+            <div className="border-4 border-black absolute inset-0 rounded-full" style={{ backgroundImage: 'linear-gradient(to right, #4F46E5, #8E2DE2)' }}></div>
             <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
               <div className="rounded-full overflow-hidden">
                 <Image

@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'grid-pattern': "url('/public/grid.png')",
+        'camo': "url('/public/camo2.jpg')",
       },
       backgroundOpacity: {
         '50': '0.5',

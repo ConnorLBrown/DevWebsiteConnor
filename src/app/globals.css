@@ -1,24 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
-  bg-color: white;
-}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 255, 255, 255;
+ 
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 100, 100, 100;
+    --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
-
+home {
+  backgroundImage: "url('/public/camo2.jpg')",
+  };
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -32,7 +30,6 @@ body {
 
 ul {
   list-style-type: none;
-  padding: ;
 }
 
 li {
@@ -43,11 +40,23 @@ li {
 .project-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 25px;
+  gap: 2px;
 }
 
 .project-card {
     display: flex;
     flex-direction: column;
     height: 100%; 
+  }
+
+  .bg-image {
+    background-image: url('/public/camo2.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the image is in the background */
   }
