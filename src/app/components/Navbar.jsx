@@ -7,9 +7,11 @@ import Connor from "../../../public/Connor.svg";
 import Image from "next/image";
 
 const navLinks = [
-  { title: "About", path: "#about" },
-  { title: "Projects", path: "#projects" },
-  { title: "Contact", path: "#contact" },
+  { title: "Bio", path: "#about" },
+  { title: "Skills", path: "#projects" },
+  { title: "Projects", path: "#contact" },
+  { title: "Github", path: "https://github.com/ConnorLBrown" },
+  { title: "LikedIn", path: "https://www.linkedin.com/in/connor-brown-32591a269/" },
 ];
 
 const Navbar = () => {
