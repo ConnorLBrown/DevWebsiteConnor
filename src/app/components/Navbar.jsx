@@ -1,54 +1,40 @@
 "use client"
-import Link from "next/link";
-import React, { useState } from "react";
-import NavLink from "./NavLink";
+import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import NavLink from "./NavLink";
+import Connor from "../../../public/Connor.svg";
 import Image from "next/image";
-import myLogo from "../../../public/mylogo.png";
 
 const navLinks = [
-  {
-    title: "About",
-    path: "#about",
-  },
-  {
-    title: "Projects",
-    path: "#projects",
-  },
-  {
-    title: "Contact",
-    path: "#contact",
-  },
+  { title: "About", path: "#about" },
+  { title: "Projects", path: "#projects" },
+  { title: "Contact", path: "#contact" },
 ];
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-black">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-8 lg:py-4 font-sans">
-          <div className="mobile-menu block md:hidden">
-            <div className="flex items-center">
-              <Image src={myLogo} className="h-8 w-auto mr-2" alt="Logo" />
-              <div>
-                <p className="text-white text-sm">Web Profile</p>
-              </div>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-slate">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+        {"Connor" && (
+            <div className="logo">
+              <Image src={Connor} alt="" className="h-8 w-auto max-h-full max-w-full mr-2" />
             </div>
+          )}
+          <div className="mobile-menu block md:hidden">
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
               className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
             >
-              {navbarOpen ? (
-                <XMarkIcon className="h-5 w-5" />
-              ) : (
-                <Bars3Icon className="h-5 w-5" />
-              )}
+              {navbarOpen ? <XMarkIcon className="h-5 w-5" /> : <Bars3Icon className="h-5 w-5" />}
             </button>
           </div>
           <div className="menu hidden md:block md:w-auto" id="navbar">
-            <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+            <h2 className="text-5xl font-semibold text-gray-800 mb-2"></h2>
+            <ul className="flex text-5xl p-4 md:p-0 md:flex-row md:space-x-8 mt-4">
               {navLinks.map((link, index) => (
                 <li key={index}>
                   <NavLink href={link.path} title={link.title} />
