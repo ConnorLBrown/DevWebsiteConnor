@@ -2,7 +2,7 @@ import React from "react";
 
 const SkillsTag = ({ name, onClick, isSelected }) => {
   const buttonStyles = isSelected
-    ? "text-white border-primary-400 bg-gradient-to-r from-blue-500 to-pink-500"
+    ? "text-black border-primary-400 bg-white"
     : "text-[#ADB7BE] border-slate-600 hover:border-white";
   return (
     <button

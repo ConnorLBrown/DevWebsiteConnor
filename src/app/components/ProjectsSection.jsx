@@ -80,10 +80,8 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
-      <h2 className="text-center text-6xl font-bold text-black mt-7 mb-4 md:mb-12">
-        My Projects
-      </h2>
+    <section id="projects" className="mx-auto text-center">
+  <h2 className="capitalize relative text-transparent font-sans mb-4 text-5xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold bg-clip-text" style={{ WebkitTextFillColor: "transparent" }}>Projects</h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
