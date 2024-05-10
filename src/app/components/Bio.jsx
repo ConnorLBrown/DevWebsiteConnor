@@ -1,6 +1,7 @@
 "use client";
 import React, { useTransition, useState } from "react";
-import AboutPic from "./BioPic";
+import BioPic from "./BioPicture";
+import SkillsSection from "./SkillsSection";
 
 const TAB_DATA = [
   {
@@ -85,24 +86,20 @@ const Bio = () => {
   };
 
   return (
-    <section className="text-black" id="about">
-      <h2 className="text-5xl font-sans font-bold text-black mt-0 mb-4">Bio:</h2>
+    <section id="about" className="bg-white py-8">
   <div className="md:flex md:items-start py-8 px-4 xl:px-16">
-    <div className="md:flex md:flex-row md:items-start md:justify-center md:flex-1">
-      <AboutPic />
+  <div className="md:flex md:flex-row md:items-start md:justify-center md:flex-1">
+      <BioPic />
     </div>
     <div className="md:flex md:flex-row md:items-start md:justify-center md:flex-1 md:ml-8 text-center md:text-left mt-4 md:mt-0">
       <div className="flex flex-col">
-        <h2 className="text-5xl font-sans font-bold text-black mt-0 mb-4">Bio:</h2>
-        <p className="text-base font-sans lg:text-lg mb-0">
-          Hi, my name is Connor Brown. I'm looking for a new opportunity to start my career.
-          I graduated with a Bachelor's of Computer Information Systems from the University
-          of North Alabama, and I'm currently enrolled in the master's program with a concentration
-          in Information Systems. During my time in school and in my own free time, I have learned
-          and taught myself a variety of skills like JavaScript, AWS Lambda, MySQL, and others that are 
-          listed in my "Skills" section. I have a passion for coding, and I am always looking to challenge 
-          myself with new technologies and improve my skills.  
-        </p>
+        <h2 className="capitalize relative text-transparent font-sans mb-4 text-5xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold bg-clip-text" style={{ WebkitTextFillColor: "transparent" }}>BIO.</h2>
+        <h3 className="text-xl text-slate-500 font-bold font-sans lg:text-lg mb-0">
+        I'm Connor Brown, a motivated professional seeking new career opportunities. Armed with a Bachelor's in Computer Information Systems from the
+        University of North Alabama and currently pursuing a Master's with a focus on Information Systems, I bring a strong educational foundation. 
+        Through dedicated self-study and academic endeavors, I've cultivated a diverse skill set, including proficiency in JavaScript, AWS Lambda, MySQL, 
+        and more. Passionate about coding, I thrive on challenges and continually strive to enhance my expertise in emerging technologies.
+        </h3>
       </div>
     </div>
   </div>

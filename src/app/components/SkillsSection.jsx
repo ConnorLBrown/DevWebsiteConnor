@@ -5,16 +5,16 @@ import { useInView } from "framer-motion";
 
 const skillsData= [
   {
-    title: "Coding Languages",
+    title: "Languages",
     id: "languages",
     skills: (
       <ul className="list-disc pl-5">
-        <li>C#</li>
-        <li>Java</li>
-        <li>JavaScript</li>
+        <li>C#,</li>
+        <li>Java,</li>
+        <li>JavaScript,</li>
         <li>TypeScript</li>
-        <li>SQL</li>
-        <li>PHP</li>
+        <li>SQL,</li>
+        <li>PHP,</li>
       </ul>
     ),
   },
@@ -23,18 +23,18 @@ const skillsData= [
     id: "software",
     skills: (
       <ul className="list-disc pl-5">
-        <li>AWS Lambda</li>
-        <li>AWS S3</li>
-        <li>AWS Amplify</li>
-        <li>AJAX</li>
-        <li>ASP.NET</li>
-        <li>HTML</li>
-        <li>CSS</li>
+        <li>AWS Lambda,</li>
+        <li>AWS S3,</li>
+        <li>AWS Amplify,</li>
+        <li>AJAX,</li>
+        <li>ASP.NET,</li>
+        <li>HTML,</li>
+        <li>CSS,</li>
         <li>TailwindCSS</li>
-        <li>Node.js</li>
-        <li>Next.js</li>
-        <li>React.js</li>
-        <li>Express.js</li>
+        <li>Node.js,</li>
+        <li>Next.js,</li>
+        <li>React.js,</li>
+        <li>Express.js,</li>
       </ul>
     ),
   },
@@ -44,18 +44,18 @@ const skillsData= [
     skills: (
       <ul className="list-disc pl-5">
         <li>MySQL</li>
-        <li>MongoDB</li>
-        <li>DynamoDB</li>
-        <li>MariaDB</li>
-        <li>Access</li>
-        <li>Excel</li>
+        <li>MongoDB,</li>
+        <li>DynamoDB,</li>
+        <li>MariaDB,</li>
+        <li>Access,</li>
+        <li>Excel,</li>
       </ul>
     ),
   },
 ];
 
 const SkillsSection = () => {
-  const [tag, setTag] = useState("Software Development");
+  const [tag, setTag] = useState("Languages");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -74,8 +74,10 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="projects" className="rounded-lg">
-    <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+    <section id="projects" className="rounded-lg grid place-items-center">
+  <h2 className="capitalize relative text-transparent font-sans mb-4 text-5xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold bg-clip-text" style={{ WebkitTextFillColor: "transparent" }}>SKILLS</h2>
+  <div className="text- flex flex-row justify-center items-center gap-2 py-6">
+
         {skillsData.map((skill) => (
           <SkillsTag
             key={skill.id}
@@ -88,9 +90,9 @@ const SkillsSection = () => {
       
       {/* Grid of buttons */}
       {selectedTag && (
-        <div className="w-100% bg-white rounded-lg p-4 mt-3  ">
+        <div className="w-100% bg-white rounded-lg p-4 mt-3 text-black ">
           {selectedTag.skills.type === "buttons" && (
-            <div className="w-65% bg-white rounded-lg p-4 mt-3 border-solid border-2 border-indigo-600 ">
+            <div className="w-65%">
               {selectedTag.skills.data.map((skill, index) => (
                 <button
                 key={index}
@@ -107,7 +109,7 @@ const SkillsSection = () => {
                 <button
                 key={index}
                 style={{
-                  backgroundColor: "rgba(0, 0, 0, 0.1)",
+                  backgroundColor: "rgba(0, 0, 0, 0)",
                   color: "black",
                   fontSize: "1.5rem",
                   padding: "0.5rem 1rem",

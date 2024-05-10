@@ -60,3 +60,61 @@ li {
     height: 100%;
     z-index: -1; /* Ensure the image is in the background */
   }
+
+  .bg-clip-text {
+    /* Set the size of your background image */
+    background-size: cover;
+    /* Add your image URL here */
+    background-image: url('./../../public/camo2.jpg');
+    /* Ensure the text fills the background image */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Set the text fill color transparent to display background image */
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  position: relative;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  -webkit-text-stroke: 1px black;
+  }
+
+  .btn-custom {
+    /* Set the size of your background image */
+    background-size: cover;
+    /* Add your image URL here */
+    background-image: url('./../../public/camo2.jpg');
+    /* Ensure the text fills the background image */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Set the text fill color transparent to display background image */
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    position: relative;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    -webkit-text-stroke: 1px black;
+    /* Add button padding and other button styles */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    cursor: pointer;
+    /* Add hover effect */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-custom:hover {
+    /* Add hover styles */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+  .border-custom-border {
+    /* Set the background image URL */
+    background-image: url('./../../public/camo2.jpg');
+    /* Set the border size and style */
+    border-width: .1px;
+    border-style: solid;
+    /* Ensure the border box includes padding */
+    box-sizing: border-box;
+    /* Ensure the background image is repeated */
+    background-repeat: repeat;
+  }
+  

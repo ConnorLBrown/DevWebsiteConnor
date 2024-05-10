@@ -16,7 +16,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-slate">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
         {"Connor" && (
@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="mobile-menu block md:hidden">
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+              className="flex items-center px-3 py-2 border rounded border-black text-slate-200 hover:text-white hover:border-white"
             >
               {navbarOpen ? <XMarkIcon className="h-5 w-5" /> : <Bars3Icon className="h-5 w-5" />}
             </button>
