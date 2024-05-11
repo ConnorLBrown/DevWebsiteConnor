@@ -86,15 +86,15 @@ const Bio = () => {
   };
 
   return (
-    <section id="about" className="bg-white py-8">
+    <section id="about" className="bg-slate-800 py-8 rounded-lg border-4 border-slate-400">
   <div className="md:flex md:items-start py-8 px-4 xl:px-16">
   <div className="md:flex md:flex-row md:items-start md:justify-center md:flex-1">
       <BioPic />
     </div>
     <div className="md:flex md:flex-row md:items-start md:justify-center md:flex-1 md:ml-8 text-center md:text-left mt-4 md:mt-0">
       <div className="flex flex-col">
-        <h2 className="capitalize relative text-transparent font-sans mb-4 text-5xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold bg-clip-text" style={{ WebkitTextFillColor: "transparent" }}>BIO.</h2>
-        <h3 className="text-xl text-slate-500 font-bold font-sans lg:text-lg mb-0">
+        <h2 className="capitalize relative text-transparent font-sans mb-4 text-5xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold bg-clip-text" style={{ WebkitTextFillColor: "transparent" }}>About me</h2>
+        <h3 className="text-xl text-white font-sans lg:text-lg mb-0">
         I'm Connor Brown, a motivated professional seeking new career opportunities. Armed with a Bachelor's in Computer Information Systems from the
         University of North Alabama and currently pursuing a Master's with a focus on Information Systems, I bring a strong educational foundation. 
         Through dedicated self-study and academic endeavors, I've cultivated a diverse skill set, including proficiency in JavaScript, AWS Lambda, MySQL, 

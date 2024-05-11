@@ -74,9 +74,9 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="projects" className="rounded-lg grid place-items-center">
+    <section id="skills" className="rounded-lg grid place-items-center bg-slate-700 border-4 border-zince-400">
   <h2 className="capitalize relative text-transparent font-sans mb-4 text-5xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold bg-clip-text" style={{ WebkitTextFillColor: "transparent" }}>SKILLS</h2>
-  <div className="text- flex flex-row justify-center items-center gap-2 py-6">
+  <div className="text-white flex flex-row justify-center items-center gap-2 py-6 bg-slate-700">
 
         {skillsData.map((skill) => (
           <SkillsTag
@@ -90,7 +90,7 @@ const SkillsSection = () => {
       
       {/* Grid of buttons */}
       {selectedTag && (
-        <div className="w-100% bg-white rounded-lg p-4 mt-3 text-black ">
+        <div className="w-100% bg-slate-700 rounded-lg p-4 mt-3 text-white ">
           {selectedTag.skills.type === "buttons" && (
             <div className="w-65%">
               {selectedTag.skills.data.map((skill, index) => (
@@ -109,13 +109,13 @@ const SkillsSection = () => {
                 <button
                 key={index}
                 style={{
-                  backgroundColor: "rgba(0, 0, 0, 0)",
-                  color: "black",
+                  backgroundColor: "#334155",
+                  color: "White",
                   fontSize: "1.5rem",
                   padding: "0.5rem 1rem",
-                  border: "none",
+                  border: "1px",
                   borderRadius: "0.5rem",
-                  cursor: "pointer",
+              
                   marginBottom: "0.5rem",
                   marginBottom: "0.5rem",
                     marginRight: "0.5rem",

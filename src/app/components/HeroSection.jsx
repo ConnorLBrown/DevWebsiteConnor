@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   return (
-    <section className="bg-white lg:py-0">
+    <section className="bg-slate-700 lg:py-0">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -22,32 +22,13 @@ const HeroSection = () => {
     Hello, I&apos;m{" "}
   </span>
   <br />
-  <span className="absolute inset-0 z-0 bg-clip-text" style={{ WebkitTextFillColor: "transparent" }}>
+  <span className="absolute inset-0 z-0 bg-clip-texts" style={{ WebkitTextFillColor: "transparent" }}>
   Connor Brown
   </span>
 
-    
-          <div className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            <TypeAnimation
-                sequence={[
-                  " Welcome to my portfolio",500,
-                  " Check out my content below",1000
-                ]}
-                wrapper="span"
-                speed={65}
-                repeat={Infinity}
-
-            />
-          </div>
           </h1>
           <div>
-  <Link
-    href="/#contact"
-    className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 btn-custom"
-  >
-    Contact Me
-  </Link>
-    <Link className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 btn-custom" href={'./Connor/.pdf'}  target="_blank"  rel="noopener noreferrer" locale={false} download>Download Resume
+    <Link className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-slate-600 border-white border-[3px] text-white " href={'./Connor/.pdf'}  target="_blank"  rel="noopener noreferrer" locale={false} download>Download Resume
   </Link>
 </div>
 
@@ -65,7 +46,7 @@ const HeroSection = () => {
                 <Image
                   src="/images/profile.png"
                   alt="Profile Picture"
-                  className="rounded-full border-slate-800 border-rounded-full border-4"
+                  className="rounded-full border-white border-rounded-full border-4"
                   layout="fill"
                   objectFit="cover"
                 />
@@ -74,6 +55,23 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </div>
+      
+      <div className="relative h-full">
+  <div className="absolute inset-0 flex justify-center items-center">
+    <div className="text-center text-[#ADB7BE] text-base sm:text-lg mb-4 lg:text-xl">
+      <TypeAnimation
+        sequence={[
+          " Welcome to my portfolio", 500,
+          " Check out my content below", 1000
+        ]}
+        wrapper="span"
+        speed={65}
+        repeat={Infinity}
+      />
+    </div>
+  </div>
+</div>
+9
     </section>
   );
 };

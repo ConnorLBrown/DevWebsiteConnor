@@ -17,8 +17,8 @@ const projectsData = [
   {
     id: 2,
     title: "UNA Faculty Full Stack Devlopment Project",
-    description: "Agile Full Stack Development Project for UNA Faculty game using MongoDB, HTML, CSS, JavaScript, and Express.js",
-    image: "https://github.com/errorless-stone/name-game-thing",
+    description: "Agile Full Stack Project for UNA Faculty using MongoDB, HTML, CSS, JavaScript, and Express.js",
+    image: "/images/projects/2.png",
     tag: ["All", "JavaScript"],
     gitUrl: "https://github.com/errorless-stone/name-game-thing",
     previewUrl: "https://alabamanewscenter.com/wp-content/uploads/2017/08/UNA-LOGO.jpg",
@@ -80,9 +80,9 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="mx-auto text-center">
+    <section id="projects" className="mx-auto text-center bg-slate-400 rounded border-4 border-gray-500">
   <h2 className="capitalize relative text-transparent font-sans mb-4 text-5xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold bg-clip-text" style={{ WebkitTextFillColor: "transparent" }}>Projects</h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      <div className="text-white flex flex-row justify-center items-center gap-3 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -115,7 +115,7 @@ const ProjectsSection = () => {
         />
       </div>
       
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 px-8 py-8">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
@@ -132,6 +132,7 @@ const ProjectsSection = () => {
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
             />
+            
           </motion.li>
         ))}
       </ul>

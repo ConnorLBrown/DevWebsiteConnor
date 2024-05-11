@@ -77,6 +77,24 @@ li {
   -webkit-text-stroke: 1px black;
   }
 
+  .bg-clip-texts {
+    /* Set the size of your background image */
+    background-size: cover;
+    /* Add your image URL here */
+    background-image: url('./../../public/camo2.jpg');
+    /* Ensure the text fills the background image */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Set the text fill color transparent to display background image */
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  position: relative;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  -webkit-text-stroke: 1px gray;
+  }
+
+
+
   .btn-custom {
     /* Set the size of your background image */
     background-size: cover;
@@ -117,4 +135,5 @@ li {
     /* Ensure the background image is repeated */
     background-repeat: repeat;
   }
+  
   
