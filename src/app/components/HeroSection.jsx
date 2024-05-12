@@ -28,7 +28,7 @@ const HeroSection = () => {
 
           </h1>
           <div>
-    <Link className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-slate-600 border-white border-[3px] text-white " href={'./Connor.pdf'}  target="_blank"  rel="noopener noreferrer" locale={false} download>Download Resume
+    <Link className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-slate-600 border-white border-[3px] text-white " href={'public/Connor.pdf'}  target="_blank"  rel="noopener noreferrer" locale={false} download>Download Resume
   </Link>
 </div>
 
