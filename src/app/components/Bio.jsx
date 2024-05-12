@@ -87,7 +87,7 @@ const Bio = () => {
 
   return (
     <section id="about" className="bg-slate-800 py-8 rounded-lg border-4 border-slate-400">
-  <div className="md:flex md:items-start py-8 px-4 xl:px-16">
+  <div className="md:flex md:items-start py-8 xl:px-16">
   <div className="md:flex md:flex-row md:items-start md:justify-center md:flex-1">
       <BioPic />
     </div>

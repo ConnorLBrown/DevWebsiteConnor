@@ -24,6 +24,15 @@ const projectsData = [
     previewUrl: "https://alabamanewscenter.com/wp-content/uploads/2017/08/UNA-LOGO.jpg",
   },
   {
+    id: 7,
+    title: "Personal Portfolio Website",
+    description: "My personal portfolio website built with Next.js, React, JavaScript, TypeScript and Tailwind CSS",
+    image: "/images/projects/7.png",
+    tag: ["All", "javaScript"],
+    gitUrl: "https://github.com/ConnorLBrown/DevWebsiteConnor",
+    previewUrl: "https://github.com/ConnorLBrown/DevWebsiteConnor",
+  },
+  {
     id: 3,
     title: "Java Customer Project",
     description: "This project is practicing the implementation of a program that using Java methods and classes for a customer.",
